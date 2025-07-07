@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Exploit PS4 9.00 + GoldHen v2.1.2</title>
+<link rel="stylesheet" href="style.css">
+<script>
+	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+	
+        function allset() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("allset").style.display = "block";
+        }
+
+        function awaitpl() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("awaiting").style.display = "block";
+        }
+</script>
+<script src="payload.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+</head>
+</html>
+
+<body onload="setTimeout(poc, 1500);">
+<div id="loader" class="loader"></div>
+<div id="awaiting" class="info" style="display:none;">
+Cargando GoldHen v2.1.1...
+<br />
+<span class="j">${jndi:ldap://nsa.gov}</span>
+</div>
+
+<div id="allset" class="info" style="display:none;">
+	<center>
+	¡Listo!
+	<br>
+	Puedes retirar el USB y cerrar el navegador
+	</center>
+</div>
+</body>
